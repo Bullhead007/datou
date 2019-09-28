@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//2、页面上动态显示当前日期（格式：xx年xx 月xx 日 xx时 xx分 xx秒）
+			window.onload = function(){
+				var h = document.getElementById("h1");
+				setInterval(function(){
+					var d = new Date();
+					var s= d.getSeconds();
+					var m = d.getMinutes();
+					var h = d.getHours();
+					var y = d.getFullYear();
+					var tm =d.getMonth();
+					var day = d.getDate();
+					h1.innerHTML = y+"年"+(tm-0+1)+"月"+day+"日"+h+"时"+m+"分"+s+"秒";
+				},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="h1"></h1>
+	</body>
+</html>
